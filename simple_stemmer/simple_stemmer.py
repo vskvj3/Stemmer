@@ -1,7 +1,7 @@
 class SimpleStemmer:
     def __init__(self):
         self.suffixes = [
-            'ing', 'ed', 'ly', 'es', 's', 'ment'
+            'ing', 'ment', 'ed', 'ly', 'es', 'able', 's'
         ]
 
     def stem(self, word):

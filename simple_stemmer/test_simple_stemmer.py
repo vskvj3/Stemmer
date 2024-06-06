@@ -24,8 +24,14 @@ class TestSimpleStemmer(unittest.TestCase):
     def test_stem_removes_ment(self):
         self.assertEqual(self.stemmer.stem('argument'), 'argu')
 
+    def test_stem_removes_able(self):
+        self.assertEqual(self.stemmer.stem('enjoyable'), 'enjoy')
+
     def test_stem_no_change(self):
         self.assertEqual(self.stemmer.stem('cat'), 'cat')
+
+    def test_stem_no_change_two(self):
+        self.assertEqual(self.stemmer.stem('less'), 'less')
 
 if __name__ == '__main__':
     unittest.main()
